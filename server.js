@@ -2,23 +2,16 @@
 const express = require('express');
 const server = express();
 
-//importo list.js
-const list = require('./db/list.js')
-
 // setto la porta
 const PORT = 3000;
 
-// console.log(list);
-
+//setto le rotte publiche
 server.use(express.static("public"));
 
 // specializzo il server a rispondere alla richiesta GET
 server.get("/", (req, res) => {
     res.send("<h1>Server del mio Blog</h1>");
 });
-
-// query - bacheca?tag=dolci&filter=100&start=10
-// params - bacheca/dolci/100/10
 
 server.get("/bacheca", (req, res) => {
     console.log(res.list);
