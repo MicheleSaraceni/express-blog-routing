@@ -1,5 +1,5 @@
 //importo list.js
-const list = require('./db/list.js')
+const list = require('../data/list');
 
 //setto il router
 const express = require("express");
